@@ -1,0 +1,12 @@
+.jumbotron{
+    background-color: white;
+}
+
+.btn-cues{
+    padding: 1rem 2rem;
+    border-radius: 300px;
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    -ms-border-radius: 300px;
+    -o-border-radius: 300px;
+}

@@ -1,0 +1,16 @@
+* [1;34md44c0e4[m - [1;32m(34 seconds ago)[m [37mnavbar.component + rutas funcional[m [2;37m- Luis Vanegas[m[1;33m (HEAD -> rama-cuestionario, rama-navbar, rama-dashboard)[m
+* [1;34m13c07c3[m - [1;32m(6 minutes ago)[m [37mInitial commmit[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34m3c3b264[m - [1;32m(7 minutes ago)[m [37mRefactorizacion de router-outlet[m [2;37m- Luis Vanegas[m[1;33m (rama-dashboard-estructura)[m
+* [1;34m7353047[m - [1;32m(21 minutes ago)[m [37mEstructura de dashboard implementada[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34ma70a28f[m - [1;32m(33 minutes ago)[m [37mValidacion personalizada de contraseña funcional[m [2;37m- Luis Vanegas[m[1;33m (rama-register, rama-inicio)[m
+* [1;34m2466dab[m - [1;32m(43 minutes ago)[m [37mValidaciones standart implementada[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34mdfa1588[m - [1;32m(73 minutes ago)[m [37mCreacion de modelo Usuario[m [2;37m- Luis Vanegas[m[1;33m (rama-login)[m
+* [1;34m1cd22b2[m - [1;32m(78 minutes ago)[m [37mValidaciones en login.component implementadas[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34m285d68d[m - [1;32m(2 hours ago)[m [37mFormulario Login implementado[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34mcba6b39[m - [1;32m(2 hours ago)[m [37mMaquetacion de login.component finalizado[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34md7055a1[m - [1;32m(2 hours ago)[m [37mImplementando rutas[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34m58adf35[m - [1;32m(2 hours ago)[m [37mMaquetacion de Bienvenida.component terminado[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34mb412001[m - [1;32m(2 hours ago)[m [37mBienvenida.component en proceso[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34mcf0d85d[m - [1;32m(3 hours ago)[m [37mCreacion de componentes Inicio, bienvenida, login, register componente[m [2;37m- Luis Vanegas[m[1;33m (rama-estructura-proyectos)[m
+* [1;34me9ed07b[m - [1;32m(5 hours ago)[m [37mCreacion de Carpetas contenedoras[m [2;37m- Luis Vanegas[m[1;33m[m
+* [1;34m348f821[m - [1;32m(5 hours ago)[m [37minitial commit[m [2;37m- Luis Vanegas[m[1;33m (master)[m
