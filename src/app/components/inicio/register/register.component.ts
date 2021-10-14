@@ -15,7 +15,17 @@ export class RegisterComponent implements OnInit {
       email: ['', Validators.required],
       password:['', [Validators.required, Validators.minLength(4)]],
       confirmPassword:['', Validators.required]
+    },
+    {
+      validators: this.checkPassword
     })
+   }
+
+   checkPassword(group: FormGroup): any{
+      const pass = group.controls.password.value;
+      const confirmPass = group.controls.confirmPassword.value;
+      
+      return pass === confirmPass ? null : {notSame: true};
    }
 
   ngOnInit(): void {
@@ -49,7 +59,7 @@ export class RegisterComponent implements OnInit {
     return this.register.get('confirmPassword').valid;
   }
 
-  get confirmPasswordNoValido(){
-    return this.register.get('confirmPassword').invalid && this.register.get('confirmPassword').touched;
+  get confirmPasswordNoCoinciden(){
+    return this.register.hasError('notSame') && this.register.get('confirmPassword').touched;
   }
 }

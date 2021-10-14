@@ -15,8 +15,8 @@
                         <span class="text-danger" *ngIf="passwordNoValido" > La contraseña <strong>es requerida</strong></span>
                     </div>
                     <div class="form-group" style="text-align: start;">
-                        <input type="password" class="form-control" placeholder="Repetir Contraseña" formControlName="confirmPassword" [class.is-valid]="confirmPasswordValido" [class.is-invalid]="confirmPasswordNoValido">
-                        <span class="text-danger" *ngIf="confirmPasswordNoValido" >Password <strong>no coinciden</strong></span>
+                        <input type="password" class="form-control" placeholder="Repetir Contraseña" formControlName="confirmPassword" [class.is-valid]="confirmPasswordValido" [class.is-invalid]="confirmPasswordNoCoinciden">
+                        <span class="text-danger" *ngIf="confirmPasswordNoCoinciden" >Password <strong>no coinciden</strong></span>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary btn-reg mr-2" type="submit" [disabled]="register.invalid">Registrar</button>
