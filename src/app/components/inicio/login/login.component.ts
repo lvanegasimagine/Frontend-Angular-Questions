@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,17 @@ export class LoginComponent implements OnInit {
       usuario: ['', [Validators.required]],
       password: ['', [Validators.required]]
     })
-   }
+  }
 
   ngOnInit(): void {
   }
 
   log(){
-      console.log(this.login.value);
+      const usuario: Usuario = {
+        nombreUsuario: this.login.get('usuario').value,
+        password: this.login.get('password').value
+      }
+      console.log(usuario);
   }
 
   get usuarioValido(){
