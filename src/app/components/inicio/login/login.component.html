@@ -4,12 +4,12 @@
             <div class="card text-center" style="padding: 20px;">
                 <h3>Login</h3>
                 <br>
-                <form>
+                <form [formGroup]="login" autocomplete="off" (ngSubmit)="log()">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Usuario">
+                        <input type="text" class="form-control" formControlName="usuario" placeholder="Usuario">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Contraseña ">
+                        <input type="password" class="form-control" formControlName="password" placeholder="Contraseña ">
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary btn-login mr-2">Aceptar</button>
