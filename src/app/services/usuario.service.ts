@@ -16,4 +16,8 @@ export class UsuarioService {
   saveUser(usuario: Usuario):Observable<any>{
     return this.http.post(this.api, usuario);
   }
+
+  changePassword(changePassword): Observable<any>{
+    return this.http.put(`${this.api}/CambiarPassword`, changePassword);
+  }
 }
