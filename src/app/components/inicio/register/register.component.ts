@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UsuarioService } from '../../../services/usuario.service';
+import { ToastrService } from 'ngx-toastr';
+import { Usuario } from '../../../models/usuario';
 
 @Component({
   selector: 'app-register',
@@ -9,10 +13,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   register: FormGroup;
-
-  constructor(private fb: FormBuilder) {
+  loading: boolean = false;
+  constructor(private fb: FormBuilder, private usuarioService: UsuarioService, private router: Router, private toastr: ToastrService) {
     this.register = this.fb.group({
-      email: ['', Validators.required],
+      usuario: ['', Validators.required],
       password:['', [Validators.required, Validators.minLength(4)]],
       confirmPassword:['', Validators.required]
     },
@@ -32,15 +36,29 @@ export class RegisterComponent implements OnInit {
   }
 
   registrarUsuario(){
-    console.log(this.register.value);
+    const usuario: Usuario = {
+      nombreUsuario: this.register.value.usuario,
+      password: this.register.value.password
+    }
+    console.log(usuario);
+    this.loading = true;
+    this.usuarioService.saveUser(usuario).subscribe(resp => {
+          this.loading = false;
+          this.toastr.success(`El usuario ${usuario.nombreUsuario} ha sido registrado exitosamente`, 'Exito!')
+          this.router.navigateByUrl('/inicio/login');
+    }, error => {
+      this.loading = false;
+      this.register.reset();
+      this.toastr.error(`${error.error.message}`, 'Error');
+    })
   }
 
-  get emailValido(){
-    return this.register.get('email').valid;
+  get usuarioValido(){
+    return this.register.get('usuario').valid;
   }
 
-  get emailNoValido(){
-    return this.register.get('email').invalid && this.register.get('email').touched;
+  get usuarioNoValido(){
+    return this.register.get('usuario').invalid && this.register.get('usuario').touched;
   }
 
   get passwordValido(){
