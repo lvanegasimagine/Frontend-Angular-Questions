@@ -18,7 +18,7 @@ export class LoginService {
   }
 
   setLocalStorage(data): void{
-    localStorage.setItem('nombreUsuario', data);
+    localStorage.setItem('token', data);
   }
 
   getNombreUsuario(): string {
@@ -26,6 +26,6 @@ export class LoginService {
   }
 
   removeLocalStorage(): void{
-    localStorage.removeItem('nombreUsuario');
+    localStorage.removeItem('token');
   }
 }
