@@ -16,7 +16,7 @@ export class CuestionariosComponent implements OnInit {
   }
 
   getNombreUsuario(): void{
-    this.nombreUsuario = this.loginService.getNombreUsuario();
+    this.nombreUsuario = this.loginService.getTokenDecoded().sub;
   }
 
 }
